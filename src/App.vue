@@ -1,11 +1,13 @@
 <template>
-  <h1>yo</h1>
+  <HomePage/>
 </template>
 
 <script>
+import HomePage from "@/components/HomePage.vue";
 export default {
   name: 'App',
   components: {
+    HomePage
   }
 }
 </script>
