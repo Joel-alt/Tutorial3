@@ -1,5 +1,5 @@
 <template>
-  <h1>Hello</h1>
+  <div class="body"></div>
 </template>
 
 <script>
@@ -9,5 +9,8 @@ export default {
 </script>
 
 <style>
-
+.body{
+  flex-basis: 80vh;
+  margin: 0;
+}
 </style>
