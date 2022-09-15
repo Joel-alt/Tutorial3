@@ -1,7 +1,9 @@
 <template>
   <div class="body">
     <h1>hello</h1>
-    <BaseButton/>
+    <BaseButton color="primary"/>
+    <BaseButton color="warn"/>
+    <BaseButton color="danger"/>
   </div>
 </template>
 

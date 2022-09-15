@@ -1,24 +1,26 @@
 <template>
-  <button type="button" disabled class="button1">
-    Base Button with custom margin
+  <button type="button"  class="button1" :class="color">
+    Hello
   </button>
 </template>
 
 <script>
 
 export default {
-  name: 'BaseButton'
+  name: 'BaseButton',
+  props: ['color']
 }
 </script>
 
 <style>
 .button1{
-  background-color: forestgreen;
   border-bottom-color: forestgreen;
   height: 40px;
+  width: 80px;
   border-radius: 5%;
   color: white;
   border:none;
+  margin: 3px;
 }
 
 .button1:hover{
@@ -26,10 +28,22 @@ export default {
 }
 
 .button1:focus{
-  background-color: red;
+  background-color: black;
 }
 
 .button1:disabled{
   background-color: grey;
+}
+
+.primary{
+  background-color: forestgreen;
+}
+
+.warn{
+  background-color: orange;
+}
+
+.danger{
+  background-color: red;
 }
 </style>
