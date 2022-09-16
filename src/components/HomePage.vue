@@ -1,6 +1,7 @@
 <template>
   <div class="body">
     <h1>hello</h1>
+    <AsyncButton/>
     <BaseButton color="primary"/>
     <BaseButton color="warn"/>
     <BaseButton color="danger"/>
@@ -9,9 +10,10 @@
 
 <script>
 import BaseButton from "@/components/BaseButton";
+import AsyncButton from "@/components/AsyncButton";
 export default {
   name: 'HomePage',
-  components: {BaseButton}
+  components: {AsyncButton, BaseButton}
 }
 </script>
 

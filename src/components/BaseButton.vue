@@ -1,6 +1,7 @@
 <template>
   <button type="button"  class="button1" :class="color">
     Hello
+    <slot/>
   </button>
 </template>
 
@@ -15,7 +16,7 @@ export default {
 <style>
 .button1{
   border-bottom-color: forestgreen;
-  height: 40px;
+  height: 80px;
   width: 80px;
   border-radius: 5%;
   color: white;
