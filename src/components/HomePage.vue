@@ -1,7 +1,7 @@
 <template>
   <div class="body">
     <h1>hello</h1>
-    <AsyncButton @click="createPromise"></AsyncButton>
+    <AsyncButton :onClick="createPromise"></AsyncButton>
     <BaseButton color="primary"/>
     <BaseButton color="warn"/>
     <BaseButton color="danger"/>
@@ -20,7 +20,7 @@ export default {
       const promise1 = new Promise((resolve) => {
         setTimeout(resolve, 2000);
       });
-      promise1.then(()=>{this.isPending = false})
+      return promise1
     }
   }
 }

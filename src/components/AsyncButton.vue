@@ -23,7 +23,8 @@ export default {
     color: {
       type: String,
       default: 'primary'
-    }
+    },
+    onClick : Function
   },
 
   data () {
@@ -34,9 +35,8 @@ export default {
 
   methods: {
     handleClick () {
-      const originalOnClick = (this.$attrs.onClick)
       this.isPending = true
-      originalOnClick.finally(() => { this.isPending = false })
+      this.onClick().finally(() => { this.isPending = false })
     }
   }
 }
