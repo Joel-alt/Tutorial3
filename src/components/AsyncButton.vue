@@ -29,7 +29,7 @@ export default {
 
   data () {
     return {
-      isPending: false
+      isPending: false,
     }
   },
 

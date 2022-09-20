@@ -13,13 +13,18 @@ import BaseButton from "@/components/BaseButton";
 import AsyncButton from "@/components/AsyncButton";
 export default {
   name: 'HomePage',
+  data() {
+    return{
+      count :2000
+    }
+  },
   components: {AsyncButton, BaseButton},
   methods:{
     createPromise () {
-      console.log("coucou")
       const promise1 = new Promise((resolve) => {
-        setTimeout(resolve, 2000);
+        setTimeout(resolve, this.count);
       });
+      this.count+=1000
       return promise1
     }
   }
