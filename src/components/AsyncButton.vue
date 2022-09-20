@@ -34,16 +34,9 @@ export default {
 
   methods: {
     handleClick () {
-      const originalOnClick = this.createPromise()
+      const originalOnClick = (this.$attrs.onClick)
       this.isPending = true
       originalOnClick.finally(() => { this.isPending = false })
-    },
-
-    createPromise () {
-      const promise1 = new Promise((resolve) => {
-        setTimeout(resolve, 2000);
-      });
-      promise1.then(()=>{this.isPending = false})
     }
   }
 }
